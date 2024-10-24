@@ -1,7 +1,7 @@
 
 # Job Scraping Dashboard
 
-This is a Streamlit-based web application that scrapes job listings from the `dev.bg` website and displays interactive visualizations of the data. It automatically scrapes job data for various categories and provides filtering options to explore job listings.
+This is a Streamlit-based web application https://jobs-data-analysis.streamlit.app/ that scrapes job listings from the `dev.bg` website and displays interactive visualizations of the data. It automatically scrapes job data for various categories and provides filtering options to explore job listings.
 
 ## Features
 
