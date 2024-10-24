@@ -61,6 +61,10 @@ def add_filters(data):
         data = data[data['Job Title'].str.contains(job_title_filter, case=False)]
     if company_filter != "All":
         data = data[data['Company Name'] == company_filter]
+    if start_date_filter and end_date_filter:
+        # Filter using the parsed datetime values for the date range
+        data['Posted Date'] = pd.to_datetime(data['Posted Date'], errors='coerce').dt.date
+        data = data[(data['Posted Date'] >= start_date_filter) & (data['Posted Date'] <= end_date_filter)]
     if tech_stack_filter:
         data = data[data['Tech Stack'].apply(lambda x: any(stack in x for stack in tech_stack_filter))]
     
